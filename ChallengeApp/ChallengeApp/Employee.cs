@@ -21,10 +21,13 @@
                 return this.score.Sum();
             }
         }
-
         public void AddScore(int grade)
         {
             this.score.Add(grade);
+        }
+        public void RemoveScore(int grade)
+        {
+            this.score.Add(grade * (-1));
         }
     }
 }

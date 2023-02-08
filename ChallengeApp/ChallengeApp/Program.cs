@@ -19,7 +19,7 @@ employee3.AddScore(7);
 employee3.AddScore(3);
 employee3.AddScore(6);
 employee3.AddScore(9);
-employee3.AddScore(5);
+employee3.RemoveScore(5);
 
 List<Employee> employees = new List<Employee>()
 {
