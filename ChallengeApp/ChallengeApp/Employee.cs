@@ -3,6 +3,10 @@
     public class Employee
     {
         private List<int> score = new List<int>();
+        public Employee(string login)
+        {
+            this.Login = login;
+        }
         public Employee(string name, string surname, string age)
         {
             this.Name = name;
@@ -13,6 +17,7 @@
         public string Name { get; private set; }
         public string Surname { get; private set; }
         public string Age { get; private set; }
+        public string Login { get; private set; }
 
         public int Result
         {
