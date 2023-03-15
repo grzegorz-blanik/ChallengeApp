@@ -1,7 +1,9 @@
 ﻿using ConsoleApp1;
 
 var employee = new Employee("Grzegorz", "Błanik");
-employee.AddGrade(1);
+employee.AddGrade("Grzegorz");
+employee.AddGrade(4f);
+employee.AddGrade("1234");
 employee.AddGrade(3);
 employee.AddGrade(7);
 var statistics = employee.GetStatistics();

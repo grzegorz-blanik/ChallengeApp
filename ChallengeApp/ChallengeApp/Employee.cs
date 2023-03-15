@@ -5,7 +5,7 @@ namespace ConsoleApp1
     public class Employee
     {
         private List<float> grades = new List<float>();
-        
+
         public Employee(string name, string surname)
         {
             this.Name = name;
@@ -16,7 +16,40 @@ namespace ConsoleApp1
 
         public void AddGrade(float grade)
         {
-            this.grades.Add(grade);
+            if (grade >= 0 && grade <= 100)
+            {
+                this.grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Grade must be between 0 to 100");
+            }
+        }
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                Console.WriteLine("String must be a number");
+            }
+        }
+        public void AddGrade(double grade)
+        {
+            float doubleAsFloat = (float)grade;
+            this.AddGrade(doubleAsFloat);
+        }
+        public void AddGrade(long grade)
+        {
+            float longAsFloat = (float)grade;
+            this.AddGrade(longAsFloat);
+        }
+        public void AddGrade(int grade)
+        {
+            float intAsFloat = (float)grade;
+            this.AddGrade(intAsFloat);
         }
         public Statistics GetStatistics()
         {
